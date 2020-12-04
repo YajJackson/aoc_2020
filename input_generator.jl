@@ -1,7 +1,7 @@
-function GetInput()::Array{Int}
+function GetInput(path)::Array{Int}
     inputArray = []
 
-    open("input.txt") do file
+    open(path) do file
         for line in eachline(file)
             push!(inputArray, line)
         end
